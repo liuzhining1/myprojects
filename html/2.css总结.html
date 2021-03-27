@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* font-style:italic  斜体 */
+        p{
+            color: #000 !important;
+            /* !important优先级最高 */
+        }
+        /* 内部样式：将css写在style标签中 */
+        div#aa{
+            background-color: aqua;
+        }
+    </style>
+<body>
+    <h1>
+        <font color="red">规定字体颜色，字体，尺寸</font>
+    </h1>
+    <h1 style="color: red;font-size: 14px;">内联样式</h1>
+    <!-- 内联样式：直接将css语法写在标签的style属性中 -->
+    <p>内部样式</p>
+    <div id="aa">外部样式</div>
+    <!-- 外部样式：需要单独创建.css文件，使用link标签引入 -->
+    <!-- 内联样式>内部样式和外部样式，但是内部和外部的优先级取决于代码的执行顺序，后执行的会覆盖先执行的 如果有重复的，优先级高的会覆盖优先级低的，可以使用!important来强制改变默认的优先级顺序->
+    <script>
+        // 使用js中的style.xxx的语法为元素添加内联样式
+        document.getElementById('aa').style.background='yellow';
+    </script>
+</body>
+</html>
